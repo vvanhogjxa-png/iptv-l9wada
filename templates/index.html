@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>IPTV Checker</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+
+            background:#0d1117;
+            color:white;
+            font-family:Arial, sans-serif;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            min-height:100vh;
+        }
+
+        .container{
+
+            width:420px;
+
+            background:#161b22;
+
+            border-radius:20px;
+
+            padding:40px;
+
+            text-align:center;
+
+            box-shadow:
+            0 0 20px rgba(0,0,0,0.5);
+        }
+
+        h1{
+
+            font-size:32px;
+
+            margin-bottom:15px;
+
+            color:#58a6ff;
+        }
+
+        p{
+
+            color:#8b949e;
+
+            margin-bottom:30px;
+
+            font-size:14px;
+        }
+
+        .upload-box{
+
+            border:2px dashed #30363d;
+
+            border-radius:15px;
+
+            padding:30px;
+
+            margin-bottom:25px;
+
+            background:#0d1117;
+        }
+
+        input[type="file"]{
+
+            color:white;
+        }
+
+        button{
+
+            width:100%;
+
+            padding:15px;
+
+            border:none;
+
+            border-radius:12px;
+
+            background:#238636;
+
+            color:white;
+
+            font-size:16px;
+
+            cursor:pointer;
+
+            transition:0.3s;
+        }
+
+        button:hover{
+
+            background:#2ea043;
+        }
+
+        .footer{
+
+            margin-top:20px;
+
+            font-size:12px;
+
+            color:#6e7681;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🚀 IPTV Checker</h1>
+
+        <p>
+            Upload your IPTV txt/m3u file
+            and check active accounts
+        </p>
+
+        <form
+            action="/api/check"
+            method="POST"
+            enctype="multipart/form-data"
+        >
+
+            <div class="upload-box">
+
+                <input
+                    type="file"
+                    name="file"
+                    accept=".txt,.m3u"
+                    required
+                >
+
+            </div>
+
+            <button type="submit">
+
+                START CHECK
+
+            </button>
+
+        </form>
+
+        <div class="footer">
+
+            Flask IPTV Checker • Railway Ready
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
